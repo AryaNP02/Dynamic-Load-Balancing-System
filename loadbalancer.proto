@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package loadbalancer;
+
+service LoadBalancer {
+  rpc GetServer(ClientRequest) returns (ServerAddress) {}
+  rpc RegisterServer(ServerInfo) returns (RegistrationResponse) {}
+  rpc ReportLoad(LoadReport) returns (LoadReportResponse) {}
+}
+
+message ClientRequest {}
+
+message ServerAddress {
+  string address = 1;
+}
+
+message ServerInfo {
+  string address = 1;
+}
+
+message RegistrationResponse {
+  bool success = 1;
+}
+
+message LoadReport {
+  string address = 1;
+  int32 load = 2;
+}
+
+message LoadReportResponse {
+  bool success = 1;
+}
