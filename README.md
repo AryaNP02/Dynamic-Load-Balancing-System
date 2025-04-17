@@ -4,7 +4,7 @@
 
 This project simulates a distributed load balancing system using gRPC and Consul for dynamic service discovery. The system efficiently distributes computational requests among multiple backend servers, preventing overload on any single server and maximizing resource utilization.
 
-The architecture consists of clients, a load balancer server, backend servers, and Consul for service discovery. The load balancer maintains the state of all backend servers and implements the selected load balancing policy, providing clients with the optimal backend server for each request.
+The architecture consists of clients, a load balancer server, backend servers, and Consul for service-based discovery. The load balancer maintains the state of all backend servers and implements the selected load balancing policy, providing clients with the optimal backend server for each request.
 
 ---
 
